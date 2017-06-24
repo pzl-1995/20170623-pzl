@@ -581,21 +581,20 @@
 	    <div style="clear:both;"></div>
 	    <br><br><br><br><br><br><br>
     </form>
-    
-    
-    
-    
-    
-    <!--脚本start-->
-    
+     
+    <!--脚本start-->   
     <script src="js/jquery-3.1.1.min.js"></script>
     <script>
         $(function(){          
             $("#user_name,#password,#confirmPassword,#companyPlace").focus(function(){
                 $(this).parent().parent().find(".right-warning").addClass("on");
-                
             }).blur(function(){  
-                $(this).parent().parent().find(".right-warning").removeClass("on");
+            	alert(this.html());
+				if($("#user_name").val()==""){
+					$(this).parent().parent().find(".right-warning").addClass("on");
+					$(this).parent().parent().find(".right-warning").html("姓名不能为空！");
+				}
+                //$(this).parent().parent().find(".right-warning").removeClass("on");
             });
         });
     </script> 
@@ -605,10 +604,4 @@
 <script language="javascript" src="js/pcasunzip.js" charset="gb2312"></script>
 <script language="javascript" defer>
     new PCAS("user.province", "user.city", "user.area", "请选择", "请选择", "请选择");
-</script>
-
-<script>
-    if(myform.Uname.value==""){
-        document.getElementById('tip').innerHTML='<font style="color:red">username error
-    }
 </script>
