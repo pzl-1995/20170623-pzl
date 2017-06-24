@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate" />
+    <title>注册——企业用户</title>
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        *{             /* 通配符 */
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: NONE;
+        }
+        body{
+            background: #f2f2f2;
+            font-family: Arial,"宋体",Lucida,Verdana,Helvetica,sans-serif;
+            font-size: 12px;
+            color: #333;
+        }
+       
+        #content{
+            margin:0 auto;
+            width:1000px;
+            border:1px solid #dcdcdc;
+        }
+        
+        .head-style{
+            margin-top: 15px;
+            height:130px;
+            margin-left: 20px;
+        }
+        
+        .head-style .img-logo{
+            width:200px;
+            padding-right:25px;
+            height:100px;
+            padding-top:15px;
+            float:left;
+            
+        }
+        .img-logo img{
+            width:100%;
+            display: block;
+        }
+        .line-spider{
+            float: left;
+            width:2px;
+            background:#dcdcdc;
+            height:70px;
+            margin-top:20px;
+            margin:20px 20px 0 5px;
+        }
+        
+        .head-title{
+            float: left;
+            font-weight:bold;
+            font-family:"微软雅黑";
+            font-size:26px;
+            color:#393939;
+            line-height: 100px;
+        }
+           
+        .info-list{
+            background:#fff;
+            border-top:1px solid #dcdcdc;
+        }
+        
+        .bg-whitefff{
+            background-color: #fff!important;
+             height:70px;
+        }
+        
+        
+        .info-title{
+            height:35px;
+            text-indent: 20px;
+            line-height: 35px;
+            font-size:16px;
+            background: #f7f7f7;
+        }
+        
+        .left-info{
+            font-size: 16px;
+            text-align: right;
+            color: rgb(183, 183, 176);
+            float: left;
+            width:30%;
+            height:30px;
+            line-height: 30px;
+            padding:20px 0;
+            padding-right:20px;
+        }
+        .left-info span{
+            color:red;
+            height:30px;
+            line-height: 30px;
+            padding:20px 0;
+            margin-right:5px;
+        }
+        .right-info{
+            font-size: 16px;
+            text-align: left;
+            float: left;
+            width:65%;
+            height:30px;
+            padding:20px 0;
+            background: #fff;
+        }
+        .right-info .message-input{
+            height:30px;
+            line-height: 30px;
+            float: left;
+            margin-left:20px;
+            width:300px;
+        }
+            .message-input input{
+                float: left;
+                width:130px;
+                height:30px;
+                line-height: 30px;
+                border: none;
+                outline: none;
+                padding:0;
+                text-indent: 5px;
+                border: 1px solid #dcdcdc;
+            }
+            .message-text{
+                float:left;
+                width:130px;
+                height:30px;
+                line-height: 30px;
+                margin-left: 10px;
+                background: #d1cfcf;
+                border: none;
+                outline: none;
+                text-indent: 5px;
+                border: 1px solid #dcdcdc;
+            }
+        .right-info .agreement-input{
+            height:30px;
+            line-height: 30px;
+            float: left;
+            margin-left:20px;
+            width:300px;
+            border: 1px solid red;
+        }
+        .agreement-input .agreement-text{
+            float:left;
+            border: 1px solid red;
+        }
+        .right-info .info-input{
+            height:30px;
+            line-height: 30px;
+            float: left;
+            margin-left:20px;
+            width:300px;
+            border: 1px solid #dcdcdc;
+        }
+            .info-input input{
+                float: left;
+                width:260px;
+                height:30px;
+                line-height: 30px;
+                border: none;
+                outline: none;
+                padding:0;
+                text-indent: 5px;
+            }
+            .info-input img{
+                width:30px;
+                height:30px;
+                float:left;
+                margin-left:2px;
+            }
+        .right-warning{
+            display: none;
+            background:#f7f7f7;
+            width:260px;
+            font-size: 10px;
+            float:left;
+            line-height: 30px;
+            margin-left:5px;
+            text-indent: 5px;
+            font: "微软雅黑";
+        }
+        .on{
+            display: block;
+        }
+        .right-info .list-info{
+            height:30px;
+            line-height: 30px;
+            float: left;
+            margin-left:20px;
+            width:300px;
+        }
+            .list-info select{
+                float: left;
+                width:80px;
+                height:30px;
+                line-height: 30px;
+                font-size: 14px;
+                font-family: arial, 宋体;
+                color: rgb(153, 153, 153);
+                border: none;
+                outline: none;
+                margin-right: 10px;
+                padding:0;
+                text-indent: 5px;
+                border:1px solid #d8d8d8;
+            }
+          .check-info{
+            height:60px;
+            line-height: 60px;
+            float: left;
+            margin-left:20px;
+            width:600px;
+            font-size: 12px;
+        }
+                .check-info .check-choose{
+                    float: left;
+                    line-height: 40px;
+                }
+                .check-info .check-text{
+                    float: left;
+                    line-height: 40px;
+                    margin: 0 8px;
+                }
+    </style>
+</head>
+<body>
+	<form action="mainServlet?method=judgeOut" method="post">
+	    <div id="content">
+	        <!--顶部-->
+	        <div class="head-style">     
+	            <div class="img-logo">
+	                 <img src="images/1.png" />
+	            </div>
+	            <div class="line-spider"></div>
+	            <div class="head-title">
+	                欢迎注册
+	            </div>
+	        </div>
+	        
+	        <div class="info-list">
+	            <div class="info-title">账户信息</div>
+	            
+	           
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>用户名：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" name="user_name" id="user_name"/>
+	                        <img src="images/user.png"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         4-20位字符，支持、汉字、字母、数字及"-"、"_"组合
+	                     </div>
+	                    <div>
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>请设置密码：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" value="" name="password"/>
+	                        <img src="images/user.png"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         6-20位字符，建议由字母，数字和符号两种以上组合
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>请确认密码：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="password" value="" id="confirmPassword"/>
+	                        <img src="images/user.png"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         请再次输入密码
+	                     </div>
+	                </div>
+	            </div>
+	        </div> 
+	        
+	        <div class="info-list">
+	            <div class="info-title">公司信息</div>
+	            
+	           
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>公司名称：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" value="" id="company"/>
+	                     </div>
+	                     <div class="right-warning" style="line-height:15px;">
+	                         请填写工商注册的全称。4-40位字符，可由中英文、数字及"_"、"-"、()、（）组成
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>公司所在地：</a>
+	                </div>
+	                <div class="right-info">
+	                        <div class="list-info">
+	                             <select name="user.province" id="companyProvince"></select>
+	                             <select name="user.city" id="city"></select>
+	                             <select name="user.area" id="area"></select>
+	                        </div>
+	                </div>
+	            </div>
+	            
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>公司地址：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="password" value="" id="companyPlace"/>
+	                     </div>
+	                    <div class="right-warning">
+	                         湖北省武汉市武汉纺织大学
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>购买类型：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="check-info">
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">IT设备</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">数码通讯</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">办公用品消耗</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">大家电</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">项目合作-政府采购</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">礼品</div>
+	                         
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                     </div>
+	                </div>
+	            </div>
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>注册邀请码：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" value="" id="invite"/>
+	                     </div>
+	                </div>
+	            </div>
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>企业人数：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="list-info">
+	                        <select name="numbers" id="number">
+	                            <option value="">请选择</option>
+	                            <option value="1-49">1-49</option>
+	                            <option value="50-99">50-99</option>
+	                            <option value="100-499">100-499</option>
+	                            <option value="500-999">500-999</option>
+	                            <option value="1000以上">1000以上</option>
+	                        </select>
+	                     </div>
+	                </div>
+	            </div>
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>公司行业：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="list-info">
+	                        <select name="subject" id="subject">
+	                            <option value="">请选择</option>
+	                            <option value="1">计算机软件</option>
+	                            <option value="2">计算机硬件</option>
+	                            <option value="3">金融类</option>
+	                            <option value="4">互联网/电子商务</option>
+	                            <option value="5">其他</option>
+	                        </select>
+	                     </div>
+	                </div>
+	            </div>
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>公司性质：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="list-info">
+	                        <select name="nature" id="nature">
+	                            <option value="">请选择</option>
+	                            <option value="1">政府机关/事业单位</option>
+	                            <option value="2">国营</option>
+	                            <option value="3">私营</option>
+	                            <option value="4">中外合资</option>
+	                            <option value="5">其他</option>
+	                        </select>
+	                     </div>
+	                </div>
+	            </div>          
+	        </div> 
+	        
+	        <div class="info-list">
+	            <div class="info-title">联系人信息</div>
+	            
+	           
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>联系人姓名：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" id="nuserName"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         2-20位字符，可由中文或英文组成
+	                     </div>
+	                </div>
+	            </div>
+	        
+	            <div  class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>所在部门：</a>
+	                </div>
+	                 <div class="right-info">
+	                     <div class="list-info">
+	                        <select name="nature" id="partment">
+	                            <option value="">请选择</option>
+	                            <option value="1">办公室</option>
+	                            <option value="2">市场部</option>
+	                            <option value="3">采购部</option>
+	                            <option value="4">技术部</option>
+	                            <option value="5">其他</option>
+	                        </select>
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>固定电话：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input" id="fixedNumber">
+	                        <input type="text" id="user_name"/>
+	                     </div>
+	                     <div class="right-warning" style="line-height:15px;">
+	                         请填写联系人常用的电话，以便于我们联系，如：0527-88105500
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>验证手机：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" id="phoneNumber"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         请填写本人手机号，审核信息以短息通知
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>短信验证码：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="message-input">
+	                        <input type="text" id="phoneIdentify"/>
+	                         <div class="message-text"><a href="">获取短信验证码</a></div>
+	                     </div>                   
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>联系人邮箱：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" id="email"/>
+	                     </div>
+	                     <div class="right-warning">
+	                         请填写本人邮箱，审核信息以邮件通知
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>*</span><a>验证码：</a>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input">
+	                        <input type="text" id="emailIdentity"/>
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>&nbsp;</span>
+	                </div>
+	                <div class="right-info">
+	                     <div class="check-info">
+	                         <div class="check-choose">
+	                            <input type="checkbox" name="" value="" id=""/>
+	                        </div>
+	                         <div class="check-text">
+	                            我已阅读并同意<a href="">《京东用户注册协议》</a>
+	                         &nbsp;<a href="">《隐私政策》</a>
+	                         </div>
+	                     </div>
+	                </div>
+	            </div>
+	            
+	            <div class="bg-whitefff">
+	                 <div class="left-info">
+	                     <span>&nbsp;</span>
+	                </div>
+	                <div class="right-info">
+	                     <div class="info-input" style="background:red;">
+	                        <input type="submit" value="立即注册" style="background:red;margin-left:12px;color:white" id="btnSure"/>
+	                     </div>
+	                </div>
+	            </div>
+	            
+	        </div> 
+	    </div>
+	    <div style="clear:both;"></div>
+	    <br><br><br><br><br><br><br>
+    </form>
+    
+    
+    
+    
+    
+    <!--脚本start-->
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){          
+            $("#user_name,#password,#confirmPassword,#companyPlace").focus(function(){
+                $(this).parent().parent().find(".right-warning").addClass("on");
+                
+            }).blur(function(){  
+                $(this).parent().parent().find(".right-warning").removeClass("on");
+            });
+        });
+    </script> 
+    <!--脚本end-->
+</body>
+</html>
+<script language="javascript" src="js/pcasunzip.js" charset="gb2312"></script>
+<script language="javascript" defer>
+    new PCAS("user.province", "user.city", "user.area", "请选择", "请选择", "请选择");
+</script>
+
+<script>
+    if(myform.Uname.value==""){
+        document.getElementById('tip').innerHTML='<font style="color:red">username error
+    }
+</script>
